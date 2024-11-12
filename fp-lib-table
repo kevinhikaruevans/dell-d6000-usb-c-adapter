@@ -1,4 +1,5 @@
 (fp_lib_table
-  (lib (name TestPointCustom)(type KiCad)(uri ${KIPRJMOD}/TestPointCustom.pretty)(options "")(descr ""))
-  (lib (name GCT)(type KiCad)(uri ${KIPRJMOD}/GCT.pretty)(options "")(descr ""))
+  (version 7)
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/Library.pretty")(options "")(descr ""))
+  (lib (name "JLC")(type "KiCad")(uri "${KIPRJMOD}/JLC.pretty")(options "")(descr ""))
 )

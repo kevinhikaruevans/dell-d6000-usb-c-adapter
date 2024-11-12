@@ -1,13 +1,17 @@
 # dell-d6000-usb-c-adapter
-KiCAD project to replace the proprietary USB-C cable
+KiCAD project to replace the proprietary USB-C cable.
 
-## Update (March 23, 2020):
-This doesn't seem to work correctly. It negotiates USB alright but it might have a mismatched signal somewhere because USB 3.x is not enabling correctly. I don't have the time to debug this right now, so feel free to go ahead and fork it. :)
+The schematic is seemingly correct: it's been tested at low-speeds and it correctly negotiates USB, things like audio, HDMI, (slow) ethernet work. However I can't seem to get the required differential impedances correct using a flex PCB with [approximate parameters](https://jlcpcb.com/capabilities/flex-pcb-capabilities):
 
-here's what worked (and what I'm failing to transfer properly to a single cable) but I think I'm misunderstanding how the rx-tx connects
+- Core $\varepsilon_r = 3.3$, Coverlay $\varepsilon_r = 2.9$, core polyimide thickness: 25 um
+- FPC finished thickness: 0.2 mm +/- 0.05mm (?)
+- Copper thickness: 35 um (1 oz)
+
+KiCAD's calculator doesn't like these values and doing it by hand leads to strange calculations. I also tried to simulate it using openEMS but to no avail. So while the PCB might work at low speeds, it will likely not work at high (near GbE) speeds... at least until somebody redoes this project.
+
+## Original
+
+Here's the original pin out:
 
 ![image](https://user-images.githubusercontent.com/4730591/178408469-d9f57309-fb6d-45d1-958c-06b19a271700.png)
 
-## Notice
-
-I tried cleaning up this project before importing this to Github, so it might not load properly. Please submit an issue if you have trouble opening the project or loading any libraries!

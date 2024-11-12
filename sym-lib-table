@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name DellAdapter-rescue)(type Legacy)(uri C:/Users/evans/Documents/KiCad/DellAdapter/DellAdapter_3_1/DellAdapter_3_1/DellAdapter-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "JLC_Library")(type "KiCad")(uri "${KIPRJMOD}/JLC_Library.kicad_sym")(options "")(descr ""))
 )
